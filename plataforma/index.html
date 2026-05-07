@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Debugger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="menu-lateral">
+        <div class="menu-bar">
+            <button id="btn-nova-conversa" class="nova-conversa">
+                <img src="../plataforma/img/nova-conversa.svg" alt="Nova Conversa" class="icon">
+            </button>
+        </div>
+        <div class="historico" id="historico-lista">
+            <button class="conversa"></button>
+        </div>
+    </aside>
+
+    <main class="conversa-atual">
+        <header class="conversa-atual-header">
+            <h2>Chatbot RAG</h2>
+        </header>
+
+        <div class="conversa-atual-body" id="chat-container">
+            <!-- As mensagens aparecerão aqui -->
+            <p class="input-resposta ">Olá! tudo bem?</p>
+            <p class="resposta-bot">Olá! Como posso ajudar você hoje?</p>
+        </div>
+
+        <footer class="conversa-atual-footer">
+            <form id="chat-form">
+                <div class="input-wrapper">
+                    <textarea class="input-bar" id="user-input" placeholder="Digite sua mensagem..." required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

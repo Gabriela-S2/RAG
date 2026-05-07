@@ -1,0 +1,28 @@
+# Dependencies
+/vendor/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+logs/
+
+# Cache
+/cache/
+
+# Temporary files
+*.tmp
+*.swp
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+#arquivos de dados do RAG
+bot/dados_rag/*
+!bot/dados_rag/.gitkeep

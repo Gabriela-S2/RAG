@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(22, 22, 23);
+    display: flex; /* Divide tela em Sidebar e Main */
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.menu-lateral {
+    width: 20%;
+    height: 100%;
+    background-color: rgb(46, 46, 45);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-bar {
+    padding: 15px;
+    display: flex;
+    justify-content: left;
+}
+
+.nova-conversa {
+    border: none;
+    background-color: rgba(130, 130, 130, 0);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nova-conversa img {
+    width: 24px;
+    height: 24px;
+    stroke: rgb(223, 223, 223);
+}
+
+.historico {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.conversa {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: solid 1px rgba(145, 144, 144, 0);
+    background-color: rgba(222, 222, 222, 0);
+    cursor: pointer;
+    transition: 0.3s;
+    align-content: left;
+    align-self: flex-start;
+    font-size: 16px;
+    color: rgb(223, 223, 223);
+}
+
+
+.conversa:hover {
+    background-color: rgb(159, 159, 159);
+    color:rgb(0, 0, 0);
+}
+
+.conversa:focus {
+    border: solid 1px rgb(159, 159, 159);
+    background-color: rgba(159, 159, 159, 0);
+    color:rgb(223, 223, 223);
+}
+
+/* Área do Chat */
+.conversa-atual {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: solid 1px rgb(39, 39, 39);
+}
+
+.conversa-atual-header {
+    height: 10%;
+    background-color: rgba(225, 224, 224, 0);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: rgb(223, 223, 223);
+}
+
+.conversa-atual-body {
+    flex: 1;
+    background-color: rgba(225, 224, 224, 0);
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mensagens */
+.input-resposta {
+    align-self: flex-end;
+    background-color: rgb(79, 79, 79);
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border-radius: 20px 20px 0px 20px;
+    margin-bottom: 15px;
+    max-width: 70%;
+}
+
+.resposta-bot {
+    align-self: flex-start;
+    background-color: rgba(79, 79, 79, 0);
+    color: rgb(189, 189, 189);
+    padding: 12px 20px;
+    border-radius: 20px 20px 20px 0;
+    margin-bottom: 15px;
+    max-width: 70%;
+}
+
+/* Footer e Input */
+.conversa-atual-footer {
+    height: auto; 
+    width: 70%;
+    background-color: rgb(46, 46, 45);
+    display: flex;
+    align-items: center;
+    align-self: center;
+    border-radius: 25px 25px 0 0;
+    min-height: 60px; 
+    padding: 10px 20px;
+}
+
+#chat-form {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.input-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-bar {
+    align-content: center;
+    font-family: inherit;
+    width: 100%;
+    /* Reduzimos a altura mínima para ficar "slim" */
+    min-height: 40px; 
+    max-height: 200px;
+    /* Padding vertical menor (8px) e horizontal (20px) */
+    padding: 4px 20px; 
+    border-radius: 20px;
+    border: solid 1px rgb(132, 131, 131);
+    scrollbar-width: none;
+    resize: none;
+    overflow-y: hidden;
+    line-height: 1.5;
+    background-color: white;
+    color: black;
+    /* Importante para o cálculo do JS não bugar */
+    display: block; 
+    box-sizing: border-box; 
+}
+
+/* Opcional: Estilo para o botão de tela cheia ficar mais discreto */
+#fullscreen-btn {
+    position: absolute;
+    right: 15px;
+    top: -35px;
+    background: rgb(79, 79, 79);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+}
+
+#fullscreen-btn img {
+    width: 16px;
+    filter: invert(1); /* Deixa o ícone branco */
+}
+
+.conversa-atual-footer button {
+    width: 100px;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(116, 175, 96);
+    border: solid 1px rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.conversa-atual-footer button:hover {
+    background-color: rgb(79, 79, 79);
+}
