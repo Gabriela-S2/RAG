@@ -93,7 +93,6 @@ RAG/
 │ ├── ragconfig.php # Ingestão de dados: lê os .txt e gera embeddings
 │ ├── setup.banco.php # Setup do banco: ativa pgvector e cria a tabela
 │ └── dadosrag/ # 📂 Coloque aqui os ficheiros .txt de contexto
-│ └── erros.txt # Exemplo de ficheiro de contexto
 ├── plataforma/
 │ ├── index.html # Estrutura da interface de chat
 │ ├── style.css # Estilização
